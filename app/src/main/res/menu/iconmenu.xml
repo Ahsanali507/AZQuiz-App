@@ -4,18 +4,15 @@
         android:id="@+id/home"
         android:icon="@drawable/baseline_home_24"
         android:title="Home"
-        android:titleTextAppearance="@style/CustomTitleStyle"
         ></item>
     <item
         android:id="@+id/quiz"
         android:icon="@drawable/baseline_quiz_24"
         android:title="Give Quiz"
-        android:titleTextAppearance="@style/CustomTitleStyle"
         ></item>
     <item
         android:id="@+id/result"
         android:icon="@drawable/baseline_keyboard_tab_24"
         android:title="Show Result"
-        android:titleTextAppearance="@style/CustomTitleStyle"
         ></item>
 </menu>
