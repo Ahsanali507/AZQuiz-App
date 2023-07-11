@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.quiz:
-                        temp = new TakeQuiz();
+                        temp = new TakingQuiz();
                         break;
 
                     case R.id.result:

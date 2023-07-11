@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AZQuiz App</string>
+    <string name="open">OpenMenu</string>
+    <string name="close">CloseMenu</string>
 </resources>
