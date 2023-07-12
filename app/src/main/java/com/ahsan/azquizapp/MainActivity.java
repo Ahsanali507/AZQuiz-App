@@ -43,20 +43,16 @@ public class MainActivity extends AppCompatActivity {
             Fragment temp;
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.home:
-                        temp = new home();
-                        break;
-
-                    case R.id.quiz:
-                        temp = new TakingQuiz();
-                        break;
-
-                    case R.id.result:
-                        temp = new ShowResult();
-                        break;
+                int itemId = menuItem.getItemId();
+                if (itemId == R.id.home) {
+                    temp = new home();
+                } else if (itemId == R.id.quiz) {
+                    temp = new TakingQuiz();
+                } else if (itemId == R.id.result) {
+                    temp = new ShowResult();
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.container,temp).commit();
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, temp).commit();
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
             }

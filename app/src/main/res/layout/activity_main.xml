@@ -18,8 +18,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/toolbar"
             app:title="AZQuiz App"
-            app:titleTextColor="@color/black"
-            android:background="@color/cardview_shadow_start_color"
+            app:titleTextColor="@color/white"
+            android:background="@drawable/gradient"
             />
 
         <FrameLayout
