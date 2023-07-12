@@ -12,6 +12,7 @@ import java.util.Random;
 
 public class TakingQuiz extends Fragment {
 
+    DBHelper db;
     char skyletter[] = {'b', 'd', 'f', 'h', 'k', 'l', 't'};
     char grassletter[] = {'a', 'c', 'e', 'i', 'm', 'n', 'o', 'r', 's', 'u', 'v', 'w', 'x', 'z'};
     char rootletter[] = {'g', 'j', 'p', 'q', 'y'};
@@ -38,7 +39,7 @@ public class TakingQuiz extends Fragment {
         next = view.findViewById(R.id.button4);
         end = view.findViewById(R.id.button10);
 
-//        DBHelper db = new DBHelper(getContext());
+        db = new DBHelper(getContext());
         rand = new Random();
         n = rand.nextInt(3);
         if (n == 0) {
@@ -75,7 +76,8 @@ public class TakingQuiz extends Fragment {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ex.setText("");
+                db.addScores(count,ne);
+                ex.setText("Quiz Finished");
             }
         });
 
@@ -83,10 +85,10 @@ public class TakingQuiz extends Fragment {
             @Override
             public void onClick(View view) {
                 if (n == 0) {
-                    ex.setText("");
+                    ex.setText("Go To Next Question");
                     count++;
                 } else {
-                    ex.setText("");
+                    ex.setText("Go To Next Question");
                     //ex.setText("Your answer is not right");
 
                 }
@@ -96,11 +98,11 @@ public class TakingQuiz extends Fragment {
             @Override
             public void onClick(View view) {
                 if (n == 1) {
-                    ex.setText("");
+                    ex.setText("Go To Next Question");
                     //ex.setText("Your answer is right");
                     count++;
                 } else {
-                    ex.setText("");
+                    ex.setText("Go To Next Question");
                     //ex.setText("Your answer is not right");
                 }
             }
@@ -109,11 +111,11 @@ public class TakingQuiz extends Fragment {
             @Override
             public void onClick(View view) {
                 if (n == 2) {
-                    ex.setText("");
+                    ex.setText("Go To Next Question");
                     //ex.setText("Your answer is right");
                     count++;
                 } else {
-                    ex.setText("");
+                    ex.setText("Go To Next Question");
                     //ex.setText("Your answer is not right");
                 }
             }

@@ -36,14 +36,14 @@ public class ShowResult extends Fragment {
 
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.append("Correct Answer: ").append(gainScore).append("\n");
+            stringBuilder.append("Correct Answers: ").append(gainScore).append("\n");
             stringBuilder.append("Total Quiz Questions: ").append(totalScore).append("\n");
-            stringBuilder.append("Total Wrong Answers: ").append(wrongAnswers).append("\n\n");
+            stringBuilder.append("Wrong Answers: ").append(wrongAnswers).append("\n\n");
 
             if (wrongAnswers < 3) {
-                stringBuilder.append("Rewards :     Good").append("\n");
+                stringBuilder.append("Reward :     Good").append("\n");
             } else {
-                stringBuilder.append("Rewards :     Improve").append("\n");
+                stringBuilder.append("Reward :     Improve").append("\n");
             }
 
             t.setText(stringBuilder.toString());

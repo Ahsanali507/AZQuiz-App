@@ -1,5 +1,7 @@
 package com.ahsan.azquizapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -50,7 +52,15 @@ public class MainActivity extends AppCompatActivity {
                     temp = new TakingQuiz();
                 } else if (itemId == R.id.result) {
                     temp = new ShowResult();
+                } else if(itemId==R.id.github){
+                    // Create a Uri object to represent the GitHub link you want to open
+                    Uri uri = Uri.parse("https://github.com/Ahsan-507?tab=repositories"); // Replace with the GitHub link you want to open
+
+                    // Create an Intent with the ACTION_VIEW action and the Uri object, and start the browser activity
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
                 }
+
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, temp).commit();
                 drawer.closeDrawer(GravityCompat.START);

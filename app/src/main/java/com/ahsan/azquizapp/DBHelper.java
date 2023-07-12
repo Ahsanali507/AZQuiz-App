@@ -41,6 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(COLUMN_GAIN_SCORE, gainScore);
         values.put(COLUMN_TOTAL_SCORE, totalScore);
 
+        System.out.println(totalScore + " " + gainScore);
         db.insert(TABLE_NAME, null, values);
         db.close();
     }
@@ -58,6 +59,7 @@ public class DBHelper extends SQLiteOpenHelper {
             score = new Score(gainScore, totalScore);
         }
 
+        System.out.println(score.getGainScore());
         cursor.close();
         db.close();
 

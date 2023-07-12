@@ -15,4 +15,19 @@
         android:icon="@drawable/baseline_keyboard_tab_24"
         android:title="Show Result"
         ></item>
+    <item
+        android:id="@+id/addcomment"
+        android:icon="@drawable/baseline_add_comment_24"
+        android:title="Add Comment"
+        ></item>
+    <item
+        android:id="@+id/viewcomment"
+        android:icon="@drawable/baseline_reviews_24"
+        android:title="View Comments"
+        ></item>
+    <item
+        android:id="@+id/github"
+        android:icon="@drawable/baseline_smart_button_24"
+        android:title="Github"
+        ></item>
 </menu>
