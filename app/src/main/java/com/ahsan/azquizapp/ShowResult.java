@@ -13,7 +13,7 @@ public class ShowResult extends Fragment {
         // Required empty public constructor
     }
 
-    TextView t;
+    TextView txt;
     public static ShowResult newInstance() {
         return new ShowResult();
     }
@@ -22,7 +22,7 @@ public class ShowResult extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_show_result, container, false);
 
-        t= view.findViewById(R.id.neroo);
+        txt= view.findViewById(R.id.neroo);
 
 
         DBHelper dbHelper = new DBHelper(getContext());
@@ -46,10 +46,10 @@ public class ShowResult extends Fragment {
                 stringBuilder.append("Reward :     Improve").append("\n");
             }
 
-            t.setText(stringBuilder.toString());
+            txt.setText(stringBuilder.toString());
 
         } else {
-            t.setText(" No results found!");
+            txt.setText(" No results found!");
         }
 
         return view;
