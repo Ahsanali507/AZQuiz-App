@@ -36,20 +36,20 @@ public class ShowResult extends Fragment {
 
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.append("Correct Answer Given: ").append(gainScore).append("\n");
+            stringBuilder.append("Correct Answer: ").append(gainScore).append("\n");
             stringBuilder.append("Total Quiz Questions: ").append(totalScore).append("\n");
             stringBuilder.append("Total Wrong Answers: ").append(wrongAnswers).append("\n\n");
 
             if (wrongAnswers < 3) {
-                stringBuilder.append("    Status :     Excellent").append("\n");
+                stringBuilder.append("Rewards :     Good").append("\n");
             } else {
-                stringBuilder.append("Status :     Overall Good").append("\n");
+                stringBuilder.append("Rewards :     Improve").append("\n");
             }
 
             t.setText(stringBuilder.toString());
 
         } else {
-            t.setText("You have not Given quiz !");
+            t.setText(" No results found here!");
         }
 
         return view;

@@ -75,7 +75,7 @@ public class TakingQuiz extends Fragment {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ex.setText("You finished your quiz");
+                ex.setText("");
             }
         });
 
@@ -83,10 +83,10 @@ public class TakingQuiz extends Fragment {
             @Override
             public void onClick(View view) {
                 if (n == 0) {
-                    ex.setText("Go Next");
+                    ex.setText("");
                     count++;
                 } else {
-                    ex.setText("Go Next");
+                    ex.setText("");
                     //ex.setText("Your answer is not right");
 
                 }
@@ -96,11 +96,11 @@ public class TakingQuiz extends Fragment {
             @Override
             public void onClick(View view) {
                 if (n == 1) {
-                    ex.setText("Go Next");
+                    ex.setText("");
                     //ex.setText("Your answer is right");
                     count++;
                 } else {
-                    ex.setText("Go Next");
+                    ex.setText("");
                     //ex.setText("Your answer is not right");
                 }
             }
@@ -109,11 +109,11 @@ public class TakingQuiz extends Fragment {
             @Override
             public void onClick(View view) {
                 if (n == 2) {
-                    ex.setText("Go Next");
+                    ex.setText("");
                     //ex.setText("Your answer is right");
                     count++;
                 } else {
-                    ex.setText("Go Next");
+                    ex.setText("");
                     //ex.setText("Your answer is not right");
                 }
             }

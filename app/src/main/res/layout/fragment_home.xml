@@ -3,16 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6F3F56AC"
     tools:context=".home">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text=" Welcome to Home page of AZQuiz App"
-        android:textSize="28dp"
-        android:textStyle="bold"
+        android:gravity="center"
         android:padding="12sp"
-        android:gravity="center"/>
+        android:text=" Welcome to Home page of AZQuiz App"
+        android:textSize="26dp"
+        android:textStyle="bold" />
 
 </FrameLayout>
