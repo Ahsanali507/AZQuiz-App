@@ -49,7 +49,7 @@ public class ShowResult extends Fragment {
             t.setText(stringBuilder.toString());
 
         } else {
-            t.setText(" No results found here!");
+            t.setText(" No results found!");
         }
 
         return view;
