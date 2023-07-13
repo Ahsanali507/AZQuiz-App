@@ -41,9 +41,9 @@ public class ShowResult extends Fragment {
             stringBuilder.append("Wrong Answers: ").append(wrongAnswers).append("\n\n");
 
             if (wrongAnswers < 3) {
-                stringBuilder.append("Reward :     Good").append("\n");
+                stringBuilder.append("").append("\n");
             } else {
-                stringBuilder.append("Reward :     Improve").append("\n");
+                stringBuilder.append("").append("\n");
             }
 
             txt.setText(stringBuilder.toString());
