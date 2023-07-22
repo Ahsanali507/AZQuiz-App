@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/resultLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ShowResult">
 
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/neroo"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="12sp"
-        android:gravity="center"
-        android:text="hello"
-        android:textAlignment="center"
-        android:background="#6F3F56AC"
-        android:textSize="26dp"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/neroo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12sp"
+            android:gravity="center"
+            android:background="#6F3F56AC"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+    </ScrollView>
+
+</LinearLayout>

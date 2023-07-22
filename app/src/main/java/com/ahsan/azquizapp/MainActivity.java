@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     temp = new ShowResult();
                 } else if(itemId==R.id.github){
                     // Create a Uri object to represent the GitHub link you want to open
-                    Uri uri = Uri.parse("https://github.com/Ahsan-507?tab=repositories"); // Replace with the GitHub link you want to open
+                    Uri uri = Uri.parse("https://github.com/Ahsan-507"); // Replace with the GitHub link you want to open
 
                     // Create an Intent with the ACTION_VIEW action and the Uri object, and start the browser activity
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);

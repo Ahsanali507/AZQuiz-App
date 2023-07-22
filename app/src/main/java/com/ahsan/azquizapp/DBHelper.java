@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "mydatabase.db";
     private static final int DATABASE_VERSION = 1;
@@ -47,7 +49,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
     public Score getRecentScores() {
         Score score = null;
-        String selectQuery = "SELECT * FROM " + TABLE_NAME + " ORDER BY rowid DESC LIMIT 1";
+        String selectQuery = "SELECT * FROM " + TABLE_NAME + " ORDER BY rowid DESC";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -64,5 +66,23 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
 
         return score;
+    }
+    public ArrayList<Score> getAllScores() {
+        ArrayList<Score> scores = new ArrayList<>();
+        String selectQuery = "SELECT * FROM " + TABLE_NAME + " ORDER BY rowid DESC";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                @SuppressLint("Range") int gainScore = cursor.getInt(cursor.getColumnIndex(COLUMN_GAIN_SCORE));
+                @SuppressLint("Range") int totalScore = cursor.getInt(cursor.getColumnIndex(COLUMN_TOTAL_SCORE));
+
+                Score score = new Score(gainScore, totalScore);
+                scores.add(score);
+            } while (cursor.moveToNext());
+        }
+        return scores;
     }
 }
